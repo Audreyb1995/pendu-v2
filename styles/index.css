@@ -121,7 +121,7 @@ main {
   margin-bottom: 15px;
   position: relative;
 }
-
+/* 
 .content-game label .password-icon {
   display: flex;
   align-items: center;
@@ -141,7 +141,7 @@ label .password-icon:hover {
 
 label .password-icon {
   display: none;
-}
+} */
 
 .content-game input {
   width: 340px;
