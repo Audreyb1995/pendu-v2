@@ -1,0 +1,223 @@
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(30, 55, 86, 1);
+  background: radial-gradient(
+    ellipse at top,
+    rgba(30, 55, 86, 1),
+    rgba(24, 34, 66, 1),
+    rgba(18, 20, 56, 1)
+  );
+}
+
+main {
+  flex: 1;
+}
+
+.content-main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 45px;
+  width: 100%;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: white;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  margin-top: 70px;
+  padding: 25px;
+  border: solid 3px #596a87;
+  border-radius: 8px;
+  color: white;
+  gap: 20px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.header h1 {
+  display: inline;
+  width: fit-content;
+}
+
+.header-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  width: 100px;
+  height: 100px;
+  border: solid 3px #4b5770;
+  border-radius: 10px;
+  background-color: #fbfbfb;
+}
+
+.header-block h2 {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 12px;
+  font-weight: 600;
+  color: #8e91cd;
+  letter-spacing: 1px;
+  text-align: center;
+  line-height: 15px;
+  margin-bottom: 10px;
+}
+
+.header-block img {
+  width: 95px;
+}
+
+.header-block p {
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-size: 30px;
+  font-weight: 600;
+  color: #5a596d;
+  letter-spacing: 1px;
+}
+
+.content-game-G2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  width: 100%;
+}
+.content-game {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15px;
+}
+
+.content-hidden {
+  display: none !important;
+}
+.content-game h3 {
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 40px;
+  color: #e0a43c;
+}
+
+.content-game label {
+  display: flex;
+  justify-content: center;
+  font-size: 16px;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.content-game label .password-icon {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 20%;
+  right: 25px;
+
+  width: 20px;
+  color: #f9f9f9;
+  transition: all 0.2s;
+}
+
+label .password-icon:hover {
+  cursor: pointer;
+  color: #ff4754;
+}
+
+label .password-icon {
+  display: none;
+}
+
+.content-game input {
+  width: 340px;
+  height: 35px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 30px;
+}
+
+.btn-G1 {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+}
+
+.content-word-to-find {
+  margin-top: 40px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.word-to-find {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+
+.div-alphabet {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-alphabet-letter span {
+  display: inline-block;
+  height: 35px;
+  width: 35px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.letter-true {
+  color: #e0a43c;
+}
+
+.letter-false {
+  color: #de3650;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 30px;
+  font-family: "Barlow Semi Condensed", sans-serif;
+  color: #e0a43c;
+  font-size: 12px;
+}
+
+button {
+  border-radius: 8px;
+  font-family: Arial;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 1px;
+  background: #16173c;
+  padding: 7px 12px 7px 12px;
+  border: solid #596a87 2px;
+  text-decoration: none;
+}
+
+button:hover {
+  background: #192647;
+  text-decoration: none;
+  cursor: pointer;
+}

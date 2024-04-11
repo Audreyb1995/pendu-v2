@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <title>Le jeu du pendu</title>
+    <link rel="stylesheet" href="./styles/reset.css" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://fonts.google.com/specimen/Barlow+Semi+Condensed"
+    />
+  </head>
+  <body>
+    <main>
+      <div class="content-main">
+        <div class="header">
+          <div>
+            <h1>
+              LE JEU<br />
+              DU<br />
+              PENDU
+            </h1>
+          </div>
+          <div class="header-block">
+            <img src="images/logo-game-pendu.png" />
+          </div>
+
+          <div class="content-hidden header-block-G2">
+            <h2>NOMBRES DE <br />VIES</h2>
+            <p class="life"></p>
+          </div>
+        </div>
+
+        <div class="content-game">
+          <h3>JOUEUR 1</h3>
+          <label for="word-G1"> ENTREZ VOTRE MOT :</label>
+          <br />
+          <label>
+            <input type="password" id="input-G1" />
+            <!-- <div class="password-icon">
+              <i class="fa-solid fa-eye" style="color: #1e3756"></i>
+              <i class="fa-solid fa-eye-slash" style="color: #1e3756"></i>
+            </div> -->
+          </label>
+          <div class="btn-G1">
+            <button class="btn-generate-word">MOT ALEATOIRE</button>
+            <button class="btn-validate-G1">VALIDER</button>
+          </div>
+        </div>
+        <div class="content-game-G2">
+          <div></div>
+          <div class="content-game content-hidden">
+            <h3>JOUEUR 2</h3>
+            <label for="letter-G2">PROPOSEZ UNE LETTRE :</label>
+            <input type="text" id="input-G2" />
+            <button class="btn-validate-G2">VALIDER</button>
+            <div class="content-word-to-find">
+              <p>LE MOT A TROUVER EST :</p>
+              <div class="word-to-find"></div>
+            </div>
+          </div>
+          <div class="div-alphabet content-hidden">
+            <div class="div-alphabet-letter"></div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer>
+      <p>Copyright - Audrey BAUFAYS 2024</p>
+      <button>REGLES</button>
+    </footer>
+    <script type="module" src="./scripts/init.js"></script>
+  </body>
+</html>
