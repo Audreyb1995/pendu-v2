@@ -13,6 +13,8 @@ body {
     rgba(24, 34, 66, 1),
     rgba(18, 20, 56, 1)
   );
+  color: white;
+  font-family: "Barlow Semi Condensed", sans-serif;
 }
 
 main {
@@ -25,10 +27,8 @@ main {
   align-items: center;
   gap: 45px;
   width: 100%;
-  font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 20px;
   font-weight: 600;
-  color: white;
 }
 
 .header {
@@ -42,7 +42,6 @@ main {
   border: solid 3px #596a87;
   border-radius: 8px;
   gap: 20px;
-  font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 32px;
   font-weight: 600;
 }
@@ -66,7 +65,6 @@ main {
 }
 
 .header-block h2 {
-  font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 12px;
   font-weight: 600;
   color: #8e91cd;
@@ -81,7 +79,6 @@ main {
 }
 
 .header-block p {
-  font-family: "Barlow Semi Condensed", sans-serif;
   font-size: 30px;
   font-weight: 600;
   color: #5a596d;
@@ -145,7 +142,6 @@ label .password-icon .fa-eye-slash {
 .content-game input {
   width: 340px;
   height: 35px;
-  font-family: "Barlow Semi Condensed", sans-serif;
   font-weight: 600;
   font-size: 14px;
   margin-bottom: 30px;
@@ -197,7 +193,6 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 20px 30px;
-  font-family: "Barlow Semi Condensed", sans-serif;
   color: #e0a43c;
   font-size: 12px;
 }

@@ -1,0 +1,7 @@
+.swal2-container .swal2-icon-error .swal2-confirm {
+  background-color: #de3650;
+}
+
+.swal2-container .swal2-icon-success .swal2-confirm {
+  background-color: #e0a43c;
+}
