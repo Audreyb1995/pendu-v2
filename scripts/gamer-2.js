@@ -1,6 +1,7 @@
 import { removeAccents } from "../scripts/init.js";
 
 let life = 11;
+let lettersFound = 0;
 
 export function runPlayer2(wordGamer1) {
   displayBlockG2();
@@ -15,7 +16,6 @@ function updateLife() {
   displayLife.innerHTML = life;
 }
 
-// Fonction qui affiche le contenu du joueur 2
 function displayBlockG2() {
   const headerBlockG2 = document.querySelector(".header-block-G2");
   headerBlockG2.classList.remove("content-hidden");
@@ -64,12 +64,20 @@ function compareLetterToWord(wordGamer1, letterG2) {
     if (letterG2 === wordGamer1[i]) {
       spanLetter[i].innerText = letterG2;
       myLetterFounded = true;
+      lettersFound++;
+      if (lettersFound === wordGamer1.length) {
+        popUpWin();
+        popUpConfirm();
+      }
     }
   }
-
   if (myLetterFounded === false && life > 0) {
     life--;
     updateLife();
+    if (life === 0) {
+      popUpLoose(wordGamer1);
+      popUpConfirm();
+    }
   }
 
   return myLetterFounded;
@@ -124,4 +132,26 @@ function ArrayletterAlphabet() {
       divAlphabet.appendChild(document.createElement("br"));
     }
   }
+}
+
+function popUpLoose(wordGamer1) {
+  Swal.fire({
+    title: "Désolé, vous avez perdu !",
+    text: "Le mot était : " + wordGamer1,
+    icon: "error",
+  });
+}
+
+function popUpWin() {
+  Swal.fire({
+    title: "Bravo vous avez gagné !",
+    icon: "success",
+  });
+}
+
+function popUpConfirm() {
+  const btnConfirmPopUp = document.querySelector(".swal2-confirm");
+  btnConfirmPopUp.addEventListener("click", () => {
+    window.location.reload();
+  });
 }

@@ -1,6 +1,7 @@
 import { runPlayer1, endPlayer1 } from "../scripts/gamer-1.js";
 import { runPlayer2 } from "../scripts/gamer-2.js";
 import { listenerFaEye } from "../scripts/label-password.js";
+
 initGame();
 
 function initGame() {
