@@ -2,6 +2,7 @@ import { removeAccents } from "../scripts/init.js";
 
 let life = 11;
 let lettersFound = 0;
+let letterUsed = [];
 
 export function runPlayer2(wordGamer1) {
   displayBlockG2();
@@ -28,7 +29,6 @@ function displayBlockG2() {
 
 function wordToFind(wordGamer1) {
   const divWordToFind = document.querySelector(".word-to-find");
-  console.log(wordGamer1);
   for (let i = 0; i < wordGamer1.length; i++) {
     const spanLetter = document.createElement("span");
     spanLetter.textContent = " _ ";
@@ -38,9 +38,20 @@ function wordToFind(wordGamer1) {
 
 function validateLetter(wordGamer1) {
   let letterG2 = document.getElementById("input-G2").value;
-  letterG2 = removeAccents(letterG2).toLowerCase();
-  let isValideLetter = compareLetterToWord(wordGamer1, letterG2);
-  colorLetter(isValideLetter, letterG2);
+  let errorMessage = document.querySelector(".error-message-G2 p");
+
+  if (letterG2.length > 1) {
+    errorMessage.textContent = "Vous devez inscrire une seule lettre !";
+  } else {
+    errorMessage.textContent = "";
+
+    letterG2 = removeAccents(letterG2).toLowerCase();
+    if (letterUsed.includes(letterG2) === false) {
+      let isValideLetter = compareLetterToWord(wordGamer1, letterG2);
+      colorLetter(isValideLetter, letterG2);
+      letterUsed.push(letterG2);
+    }
+  }
 }
 
 function initListenervalidateLetter(wordGamer1) {
@@ -65,18 +76,19 @@ function compareLetterToWord(wordGamer1, letterG2) {
       spanLetter[i].innerText = letterG2;
       myLetterFounded = true;
       lettersFound++;
+
       if (lettersFound === wordGamer1.length) {
         popUpWin();
-        popUpConfirm();
       }
     }
   }
+
   if (myLetterFounded === false && life > 0) {
     life--;
     updateLife();
+
     if (life === 0) {
       popUpLoose(wordGamer1);
-      popUpConfirm();
     }
   }
 
@@ -140,6 +152,8 @@ function popUpLoose(wordGamer1) {
     text: "Le mot était : " + wordGamer1,
     icon: "error",
   });
+
+  popUpConfirm();
 }
 
 function popUpWin() {
@@ -147,6 +161,8 @@ function popUpWin() {
     title: "Bravo vous avez gagné !",
     icon: "success",
   });
+
+  popUpConfirm();
 }
 
 function popUpConfirm() {

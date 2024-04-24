@@ -10,7 +10,13 @@
     />
     <link rel="stylesheet" href="./styles/reset.css" />
     <link rel="stylesheet" href="./styles/index.css" />
-    <link rel="stylesheet" href="./styles/override.css" />
+    <link
+      rel="stylesheet"
+      href="./styles/img-body-pendu.css"
+      <link
+      rel="stylesheet"
+      href="./styles/override.css"
+    />
     <link
       rel="stylesheet"
       href="./node_modules/@fortawesome/fontawesome-free/css/all.min.css"
@@ -52,17 +58,32 @@
               <i class="fa-solid fa-eye-slash"></i>
             </div>
           </label>
+          <div class="error-message-G1"><p></p></div>
           <div class="btn-G1">
             <button class="btn-generate-word">MOT ALEATOIRE</button>
             <button class="btn-validate-G1">VALIDER</button>
           </div>
         </div>
         <div class="content-game-G2">
-          <div></div>
+          <div class="img-pendu">
+            <img class="img-body-1" src="images/img-pendu-1.png" />
+            <img class="img-body-2" src="images/img-pendu-2.png" />
+            <img class="img-body-3" src="images/img-pendu-3.png" />
+            <img class="img-body-4" src="images/img-pendu-4.png" />
+            <img class="img-body-5" src="images/img-pendu-5.png" />
+            <img class="img-body-6" src="images/img-pendu-6.png" />
+            <img class="img-body-7" src="images/img-pendu-7.png" />
+            <img class="img-body-8" src="images/img-pendu-8.png" />
+            <img class="img-body-9" src="images/img-pendu-9.png" />
+            <img class="img-body-10" src="images/img-pendu-10.png" />
+            <img class="img-body-11" src="images/img-pendu-11.png" />
+          </div>
           <div class="content-game content-hidden">
             <h3>JOUEUR 2</h3>
+            <div class="error-message-G2"><p></p></div>
             <label for="letter-G2">PROPOSEZ UNE LETTRE :</label>
             <input type="text" id="input-G2" />
+
             <button class="btn-validate-G2">VALIDER</button>
             <div class="content-word-to-find">
               <p>LE MOT A TROUVER EST :</p>
@@ -78,7 +99,7 @@
 
     <footer>
       <p>Copyright - Audrey BAUFAYS 2024</p>
-      <button>REGLES</button>
+      <button class="rules">REGLES</button>
     </footer>
     <script src="./node_modules/sweetalert2/dist/sweetalert2.min.js"></script>
     <script type="module" src="./scripts/init.js"></script>

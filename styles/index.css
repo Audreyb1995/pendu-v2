@@ -147,6 +147,18 @@ label .password-icon .fa-eye-slash {
   margin-bottom: 30px;
 }
 
+.error-message-G1 {
+  color: #de3650;
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
+.error-message-G2 p {
+  color: #de3650;
+  font-size: 16px;
+  margin-bottom: 35px;
+}
+
 .btn-G1 {
   display: flex;
   justify-content: center;
@@ -189,6 +201,16 @@ label .password-icon .fa-eye-slash {
   color: #de3650;
 }
 
+.img-pendu {
+  display: flex;
+  flex-direction: row;
+}
+
+.img-pendu img {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+}
 footer {
   display: flex;
   justify-content: space-between;

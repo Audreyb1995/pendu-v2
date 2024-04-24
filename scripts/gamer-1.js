@@ -13,7 +13,6 @@ function initListenerRandomWord() {
 async function apiRandomWord() {
   const response = await fetch("https://trouve-mot.fr/api/random/1");
   const word = await response.json();
-  console.log(word[0].name);
   return word[0].name;
 }
 
