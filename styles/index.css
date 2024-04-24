@@ -201,16 +201,6 @@ label .password-icon .fa-eye-slash {
   color: #de3650;
 }
 
-.img-pendu {
-  display: flex;
-  flex-direction: row;
-}
-
-.img-pendu img {
-  position: absolute;
-  width: 200px;
-  height: 200px;
-}
 footer {
   display: flex;
   justify-content: space-between;

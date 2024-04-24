@@ -4,8 +4,6 @@ import { listenerFaEye } from "../scripts/label-password.js";
 
 initGame();
 
-console.log(/^[a-z]+$/.test("toto-toto"));
-
 function initGame() {
   runPlayer1();
   initListenerValidateWord();
@@ -25,9 +23,9 @@ function validateWord() {
 
   const errorMessage = document.querySelector(".error-message-G1 p"); // Sélectionne l'élément <p> à l'intérieur de l'élément avec la classe "error-message-G1"
 
-  if (wordGamer1.length < 3) {
+  if (wordGamer1.length < 2) {
     errorMessage.textContent =
-      "Vous devez inscrire un mot d'au moins trois lettres !";
+      "Vous devez inscrire un mot d'au moins deuxlettres !";
   } else if (!newRegExWord.test(wordGamer1)) {
     errorMessage.textContent = "Vous devez inscrire seulement des lettres !";
   } else {

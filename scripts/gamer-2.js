@@ -1,4 +1,5 @@
 import { removeAccents } from "../scripts/init.js";
+import { displayPendu } from "../scripts/display-body-pendu.js";
 
 let life = 11;
 let lettersFound = 0;
@@ -56,14 +57,18 @@ function validateLetter(wordGamer1) {
 
 function initListenervalidateLetter(wordGamer1) {
   const btnValidateLetter = document.querySelector(".btn-validate-G2");
+  const inputLetterG2 = document.getElementById("input-G2");
   btnValidateLetter.addEventListener("click", () => {
     validateLetter(wordGamer1);
+    inputLetterG2.value = "";
   });
 
   const enterValidateLetter = document.getElementById("input-G2");
+
   enterValidateLetter.addEventListener("keyup", (e) => {
     if (e.code === "Enter") {
       validateLetter(wordGamer1);
+      inputLetterG2.value = "";
     }
   });
 }
@@ -86,7 +91,7 @@ function compareLetterToWord(wordGamer1, letterG2) {
   if (myLetterFounded === false && life > 0) {
     life--;
     updateLife();
-
+    displayPendu(life);
     if (life === 0) {
       popUpLoose(wordGamer1);
     }
